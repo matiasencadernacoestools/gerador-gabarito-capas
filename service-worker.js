@@ -1,4 +1,4 @@
-const CACHE_NAME="gerador-capas-v2.10.12";
+const CACHE_NAME="gerador-capas-v2.10.13";
 const ASSETS=["./","./index.html","./manifest.webmanifest","./favicon.ico","./favicon-64.png","./apple-touch-icon.png","./icon-192.png","./icon-512.png"];
 self.addEventListener("install",event=>{
   event.waitUntil(
