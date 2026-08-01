@@ -1,13 +1,24 @@
-# Gerador de Capas — Versão 2.10.13
+# Gerador de Capas — versão 2.10.16
 
-Base estável preservada, sem exportação PSD experimental em camadas.
+## Correção
 
-## Ajustes
+- Corrigidas as guias nativas do Photoshop no botão **BAIXAR PSD 300 DPI COM GUIAS E CAMADAS**.
+- O novo exportador agora usa o mesmo conjunto completo de posições do botão tradicional:
+  - limites externos;
+  - dobras;
+  - lombada do fundo;
+  - início e fim do dorso;
+  - lombada da frente.
+- A camada rasterizada **GABARITO TÉCNICO** permanece separada e transparente.
+- Nenhuma alteração foi feita na rotina do botão tradicional **BAIXAR PSD 300 DPI COM GUIAS**.
+- Nenhuma alteração foi feita no cálculo visual das guias do sistema.
 
-- Todo novo texto inicia com Arial, 45 pt, centralizado, sem negrito, sem itálico e sem rotação.
-- Novo texto é inserido no centro da frente da capa.
-- Seleção múltipla aceita Alt para movimentação livre, sem snap.
-- Ctrl + scroll usa o ponteiro como centro do zoom.
-- Zoom mais suave, com passo menor.
-- Guias técnicas e exportação PSD tradicional preservadas.
-- Cache atualizado para gerador-capas-v2.10.13.
+## Causa corrigida
+
+A biblioteca `ag-psd` recebe as posições das guias em pixels e realiza internamente a conversão exigida pelo formato PSD. A versão anterior multiplicava novamente os valores por 32, colocando a maior parte das guias fora dos limites do documento.
+
+## Arquivos a atualizar
+
+- `index.html`
+- `service-worker.js`
+- `README.md`
