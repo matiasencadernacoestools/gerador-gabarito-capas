@@ -1,23 +1,21 @@
-# Gerador de Capas — versão 2.10.16
+# Gerador de Capas — versão 2.10.17
 
-## Correção
+## Nova exportação para Mockup
 
-- Corrigidas as guias nativas do Photoshop no botão **BAIXAR PSD 300 DPI COM GUIAS E CAMADAS**.
-- O novo exportador agora usa o mesmo conjunto completo de posições do botão tradicional:
-  - limites externos;
-  - dobras;
-  - lombada do fundo;
-  - início e fim do dorso;
-  - lombada da frente.
-- A camada rasterizada **GABARITO TÉCNICO** permanece separada e transparente.
-- Nenhuma alteração foi feita na rotina do botão tradicional **BAIXAR PSD 300 DPI COM GUIAS**.
-- Nenhuma alteração foi feita no cálculo visual das guias do sistema.
+Foi adicionado o botão:
 
-## Causa corrigida
+**BAIXAR PNG 200 DPI PARA MOCKUP**
 
-A biblioteca `ag-psd` recebe as posições das guias em pixels e realiza internamente a conversão exigida pelo formato PSD. A versão anterior multiplicava novamente os valores por 32, colocando a maior parte das guias fora dos limites do documento.
+A rotina:
 
-## Arquivos a atualizar
+- gera PNG com metadados de 200 dpi;
+- exporta somente a área útil da capa;
+- remove as áreas de dobra superior, inferior, esquerda e direita;
+- não inclui textos técnicos, cotas, linhas tracejadas ou guias de centro;
+- preserva fundo, imagens, textos, sombras, rotações e ordem visual dos elementos;
+- mantém as demais rotinas de PNG e PSD sem alterações.
+
+## Arquivos para atualizar no GitHub
 
 - `index.html`
 - `service-worker.js`
