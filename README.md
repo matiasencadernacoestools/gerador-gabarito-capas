@@ -1,30 +1,30 @@
-# Gerador de Capas — versão 2.10.19
+# Gerador de Capas — versão 2.10.20
 
-## Correção das guias centrais no Photoshop
+## Correção de centralização e snap
 
-Foi adicionada a guia nativa de eixo horizontal central no Photoshop.
+Os botões de centralização horizontal e as guias magnéticas agora usam os mesmos eixos corrigidos do gabarito:
 
-A posição é calculada corretamente entre:
+- **Fundo:** centro entre a borda útil esquerda e a lombada do fundo.
+- **Frente:** centro entre a lombada da frente e a borda útil direita.
 
-- a dobra superior;
-- a dobra inferior.
+A correção funciona para:
 
-A correção foi aplicada em:
+- textos;
+- imagens;
+- botão **Centralizar horizontalmente**;
+- movimentação com snap;
+- seleção múltipla movimentada com snap.
 
-- **BAIXAR PSD 300 DPI COM GUIAS**;
-- **BAIXAR PSD 300 DPI COM GUIAS E CAMADAS**.
-
-A guia aparece quando a opção **Guias de centro** estiver ativada.
+A tecla `Alt` continua permitindo movimentação livre, ignorando o snap.
 
 Não foram alteradas:
 
-- guias centrais verticais;
-- dobras externas;
+- guias nativas do Photoshop;
+- cálculos do dorso;
+- dobras;
 - lombadas;
-- dorso;
-- pré-visualização;
 - exportações PNG;
-- estrutura de camadas do PSD.
+- rotinas PSD.
 
 ## Arquivos para atualizar no GitHub
 
