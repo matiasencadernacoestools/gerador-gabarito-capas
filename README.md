@@ -1,19 +1,30 @@
-# Gerador de Capas — versão 2.10.17
+# Gerador de Capas — versão 2.10.19
 
-## Nova exportação para Mockup
+## Correção das guias centrais no Photoshop
 
-Foi adicionado o botão:
+Foi adicionada a guia nativa de eixo horizontal central no Photoshop.
 
-**BAIXAR PNG 200 DPI PARA MOCKUP**
+A posição é calculada corretamente entre:
 
-A rotina:
+- a dobra superior;
+- a dobra inferior.
 
-- gera PNG com metadados de 200 dpi;
-- exporta somente a área útil da capa;
-- remove as áreas de dobra superior, inferior, esquerda e direita;
-- não inclui textos técnicos, cotas, linhas tracejadas ou guias de centro;
-- preserva fundo, imagens, textos, sombras, rotações e ordem visual dos elementos;
-- mantém as demais rotinas de PNG e PSD sem alterações.
+A correção foi aplicada em:
+
+- **BAIXAR PSD 300 DPI COM GUIAS**;
+- **BAIXAR PSD 300 DPI COM GUIAS E CAMADAS**.
+
+A guia aparece quando a opção **Guias de centro** estiver ativada.
+
+Não foram alteradas:
+
+- guias centrais verticais;
+- dobras externas;
+- lombadas;
+- dorso;
+- pré-visualização;
+- exportações PNG;
+- estrutura de camadas do PSD.
 
 ## Arquivos para atualizar no GitHub
 
